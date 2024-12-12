@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل - رينما</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>دليل - رينما</h1>
+        <p>دليلك لمعرفة كل مواقع العراق</p>
+    </header>
+
+    <!-- رسالة ترحيبية -->
+    <div class="welcome-message">
+        <h2>أهلاً وسهلاً في دليل رينما! اكتشف كل شيء عن مواقع العراق.</h2>
+    </div>
+
+    <!-- صورة مدمجة تحتوي على جميع المحافظات -->
+    <div class="image-container">
+        <img src="iraq-map.jpg" alt="خريطة العراق" class="map-image">
+    </div>
+
+    <!-- زر الدخول -->
+    <footer>
+        <button id="enter" onclick="showProvinces()">دخول</button>
+    </footer>
+
+    <!-- قائمة المحافظات -->
+    <div id="provinces-list" class="provinces-list" style="display: none;">
+        <button class="province-btn" onclick="showProfessionals('بغداد')">بغداد</button>
+        <button class="province-btn" onclick="showProfessionals('البصرة')">البصرة</button>
+        <button class="province-btn" onclick="showProfessionals('أربيل')">أربيل</button>
+        <button class="province-btn" onclick="showProfessionals('السليمانية')">السليمانية</button>
+        <button class="province-btn" onclick="showProfessionals('دهوك')">دهوك</button>
+        <button class="province-btn" onclick="showProfessionals('كربلاء')">كربلاء</button>
+        <button class="province-btn" onclick="showProfessionals('النجف')">النجف</button>
+        <button class="province-btn" onclick="showProfessionals('نينوى')">نينوى</button>
+        <button class="province-btn" onclick="showProfessionals('صلاح الدين')">صلاح الدين</button>
+        <button class="province-btn" onclick="showProfessionals('الانبار')"> الانبار</button>
+        <button class="province-btn" onclick="showProfessionals('بابل')">بابل</button>
+        <button class="province-btn" onclick="showProfessionals('المثنى')">المثنى</button>
+        <button class="province-btn" onclick="showProfessionals('ذي قار')">ذي قار</button>
+        <button class="province-btn" onclick="showProfessionals('ميسان')">ميسان</button>
+        <button class="province-btn" onclick="showProfessionals('واسط')">واسط</button>
+        <button class="province-btn" onclick="showProfessionals('ديالى')">ديالى</button>
+        <button class="province-btn" onclick="showProfessionals('الديوانية')">الديوانية</button>
+        <button class="province-btn" onclick="showProfessionals('كركوك')">كركوك</button>
+        <button class="province-btn" onclick="showProfessionals('حلبجة')">حلبجة</button>
+        <!-- إضافة باقي المحافظات -->
+    </div>
+
+    <!-- قائمة المهن -->
+    <div id="professionals-list" class="professionals-list" style="display: none;">
+        <button onclick="goBack()">الرجوع إلى الصفحة الرئيسية</button>
+        <div id="professionals-container"></div>
+    </div>
+
+    <!-- قائمة عناوين المهن -->
+    <div id="titles-list" class="titles-list" style="display: none;">
+        <button onclick="goBackToProfessionals()">الرجوع للمهن</button>
+        <div id="titles-container"></div>
+    </div>
+
+    <!-- تفاصيل المهنة -->
+    <div id="job-details" class="job-details" style="display: none;">
+        <h3>تفاصيل المهنة</h3>
+        <form id="job-form">
+            <label for="job-name">اسم المهنة:</label>
+            <input type="text" id="job-name" name="job-name" required>
+
+            <label for="job-address">العنوان:</label>
+            <input type="text" id="job-address" name="job-address" required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tiktok">رابط تيك توك:</label>
+            <input type="url" id="tiktok" name="tiktok" required>
+
+            <label for="facebook">رابط فيسبوك:</label>
+            <input type="url" id="facebook" name="facebook" required>
+
+            <label for="instagram">رابط إنستغرام:</label>
+            <input type="url" id="instagram" name="instagram" required>
+
+            <label for="photos">رفع 5 صور:</label>
+            <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+
+            <label for="video">رفع فيديو (30 ثانية):</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+
+            <button type="submit">حفظ المهنة</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
